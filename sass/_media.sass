@@ -1,0 +1,72 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+@media (max-width: 1024px)
+	.header-menu
+		.panel
+			width: 150% !important
+			z-index: 2
+		.info
+			left: -50%
+	.about-us
+		grid-template-columns: 40% 40%
+	.portfolio-section
+		grid-template: 900px / 35% 55%
+		.container
+			grid-template-columns: 1fr 1fr
+	.benefits-section
+		grid-template-columns: 30% 30% 30%
+	.reviews-section
+		grid-template-columns: 35% 55%
+
+@media (max-width: 768px)
+	.header-menu
+		.panel
+			width: 250% !important
+			z-index: 2
+		.info
+			left: -150%
+		.social
+			left: -50%
+	.about-us
+		grid-template-columns: 90%
+	.portfolio-section
+		grid-template: auto 900px / 90%
+		.container
+			grid-template-columns: 1fr 1fr
+	.benefits-section
+		grid-template-columns: 45% 45%
+	.reviews-section
+		grid-template: 100px / 90%
+
+@media (max-width: 425px)
+	.header-inner
+		.header-title
+			font-size: 32px !important
+	.header-menu
+		.open-menu,.open-social,.open-contacts,.open-info
+			
+			.desktop
+				display: none
+		.panel
+			width: 300% !important
+			z-index: 2
+			.menu-item
+				font-size: 12px !important
+			.icon
+				font-size: 26px !important
+		.info
+			left: -200%
+		.social
+			left: -100%
+	.about-us
+		padding: 32px 0
+		grid-template-columns: 90%
+	.portfolio-section
+		grid-template: auto 1500px / 90%
+		.container
+			grid-template-columns: 1fr
+	.benefits-section
+		grid-template-columns: 90%
+	.reviews-section
+		grid-template: 150px / 90%

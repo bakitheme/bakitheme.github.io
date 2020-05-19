@@ -1,0 +1,402 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	margin: 0
+	padding: 0
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.grid 
+	display: grid
+form
+	text-align: left
+	position: relative
+	label
+		font-size: 14px
+		font-weight: bold
+	input,textarea
+		font-family: $default-font
+		width: 80%
+		border: none
+		display: block
+		border-bottom: 2px solid #000
+		resize: none
+		padding: 12px
+		margin-bottom: 8px
+		transition: .4s
+		&:focus
+			border-bottom-color: $accent
+.main-header
+	position: relative
+	height: 100vh
+	background-size: cover
+	background-attachment: fixed
+	grid-template: auto 1fr / 1fr
+	.header-menu
+		.open:nth-child(odd)
+			background-color: lighten($accent, 20%)
+		z-index: 2
+		cursor: pointer
+		transition: .5s
+		display: grid
+		grid-template-columns: 25% 25% 25% 25%
+		.panel
+			display: grid
+			grid-template-columns: 50% 50%
+			background-color: lighten($accent, 35%)
+			position: absolute
+			width: 100%
+			height: 100vh
+			top: -110vh
+			transition: .5s
+			.menu-item
+				
+
+
+				.icon
+					display: block
+					margin-bottom: 5px
+				display: block
+				padding: 12px
+				text-align: left
+				text-decoration: none
+				text-transform: uppercase
+				letter-spacing: 2px
+				font-size: 14px
+				color: #000
+				transition: .3s
+				font-weight: bold
+				&:hover
+					background-color: lighten($accent, 20%)
+		.info
+			background-color: #111
+			color: #ccc
+			display: block !important
+			text-align: left
+			p,form,h3,span
+				padding-left: 16px
+			padding-top: 16px
+			h3
+				color: #f7f7f7
+				margin: 0
+		.contacts
+			grid-template: auto 1fr / 1fr
+			form
+				padding-left: 16px
+		.open-menu,.open-social,.open-contacts,.open-info
+			background-color: lighten($accent, 25%)
+			position: relative
+			h1
+				text-transform: uppercase
+				letter-spacing: 2px
+				font-size: 14px
+				padding: 12px
+			&:hover
+				.panel
+					top: 0
+		
+	.header-inner
+		align-self: center
+		justify-self: center
+		padding: 16px
+		z-index: 1
+		.button
+			margin: 5px
+		.header-subtitle
+			font-size: 20px
+			font-weight: normal
+			color: #f5f5f5
+			margin-bottom: 20px
+		.header-title
+			line-height: 1.5
+			margin: 0
+			font-size: 48px
+			text-transform: uppercase
+			font-weight: normal
+			letter-spacing: 2px
+			color: #fafafa
+	&::before
+		content: ''
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: #000
+		opacity: 0.5
+		position: absolute
+		height: 100vh
+
+.button
+	font-family: $default-font
+	outline: none
+	border: none
+	text-decoration: none
+	color: #000
+	background-color: $accent
+	padding: 12px 36px
+	transition: .3s
+	display: inline-block
+	overflow: hidden
+	position: relative
+	&::after
+		content: ''
+		background-color: lighten($accent, 25%)
+		width: 20px
+		height: 20px
+		border-radius: 50%
+		position: absolute
+		transition: .3s
+		top: -20px
+		left: -20px
+	&:hover
+		&::after
+			transform: scale(10)
+			top: 0
+			left: 0
+			opacity: 0
+		background-color: darken($accent, 10%)
+		text-decoration: none
+		color: #000
+	&:focus
+		background-color: lighten($accent, 10%)
+.button-secondary
+	background-color: #111111
+	color: #ffffff
+	&:hover
+		background-color: #000000
+		color: #ffffff
+	&:focus
+		background-color: #151515
+
+.about-us
+	justify-content: center
+	align-items: center
+	padding: 32px
+	grid-template-columns: 50% 30%
+	grid-gap: 20px
+	.about-text
+	.about-image
+
+.skills-section
+	grid-template-columns: 1fr 1fr
+	grid-gap: 16px
+	margin-bottom: 24px
+	
+	.skills-item
+		.title
+			font-size: 12px
+			font-weight: bold
+		.bar
+			transition: .4s
+			width: 0
+			height: 5px
+			background-color: $accent
+	&:hover
+		.skills-item
+			.bar
+				width: 100%
+
+.portfolio-section
+	grid-template-columns: 20% 60%
+	grid-template-rows: 600px
+	justify-content: center
+	grid-gap: 10px
+	.controls
+		height: 400px
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-gap: 10px
+		.portfolio-section-heading
+			font-size: 14px
+			grid-column: 1 / 3
+			font-weight: bold
+		button
+			background-color: $accent
+			border: none
+			outline: none
+			transition: .5s
+			display: block
+			width: 100%
+			font-size: 14px
+			text-align: left
+			padding: 16px
+			text-transform: uppercase
+			letter-spacing: 2px
+			position: relative
+			&:hover
+				background-color: darken($accent, 5%)
+
+			&:focus
+				background-color: lighten($accent, 25%)
+					
+	.container
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		// grid-template-rows: 400px 400px 400px
+		grid-gap: 10px
+		.mix
+			background: #000
+			display: grid
+			.mix-content
+				position: absolute
+				padding: 12px
+				align-self: flex-start
+				z-index: 1
+				color: #fafafa
+				font-size: 14px
+				opacity: 0
+				transition: .6s
+				.link
+					font-weight: bold
+					text-transform: uppercase
+					color: #fff
+					letter-spacing: 2px
+					transition: .3s
+					&:hover
+						color: $accent
+
+			&::before
+				content: ' '
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				transition: .4s
+				background-color: #000000
+				opacity: 0
+				position: absolute
+			position: relative
+			&:hover
+				.mix-content
+					opacity: 1
+					
+				&::before
+					opacity: .4
+			background-size: cover
+			background-position: center
+
+.benefits-section
+	margin-top: 32px
+	justify-content: center
+	grid-template-columns: 20% 20% 20%
+	grid-gap: 10px
+	.benefits-title
+		padding: 16px
+		background-color: #fafafa
+		border: 5px solid lighten($accent, 5%)
+	.benefits-item
+		background-color: lighten($accent, 25%)
+		padding: 16px
+		transition: .4s
+		cursor: pointer
+		.icon
+		.item-head
+			font-size: 18px
+			text-transform: uppercase
+			letter-spacing: 2px
+		&:hover
+			background-color: lighten($accent, 5%)
+			transform: scale(1.01)
+			
+
+.reviews-section
+	grid-template-columns: 20% 40%
+	grid-template-rows: 1fr 40px
+	justify-content: center
+	margin: 32px 0
+	grid-gap: 10px
+	.reviews-title
+		grid-row: 1 / 3
+		background-image: url('../img/dist/3.jpg')
+		background-size: cover
+		padding: 16px
+		position: relative
+		color: #ffffff
+		h1
+			position: absolute
+			z-index: 1
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: #000000
+			opacity: .5
+	.single-review			
+		padding: 16px
+		font-size: 14px
+		background-color: lighten($accent, 20%)
+		.client-portait
+			width: 100px
+			height: 100px
+			background-size: cover
+			border-radius: 50%
+
+.owl-nav
+	.owl-prev,.owl-next
+		text-transform: uppercase
+		letter-spacing: 2px
+		font-size: 14px !important
+		font-weight: bold !important
+		transition: .4s
+		&:hover
+			background-color: lighten($accent, 5%) !important
+		&:focus
+			outline: none
+		background-color: lighten($accent, 25%) !important
+	display: grid
+	margin-top: 10px
+	grid-template: 100px / 1fr 1fr
+	grid-gap: 10px
+
+.main-footer
+	background-color: lighten($accent, 25%)
+	height: 200px
+	text-transform: uppercase
+	font-size: 14px
+	text-align: center
+	justify-content: center
+	align-items: center
+	font-size: 14px
+	letter-spacing: 2px
+	.icon
+		font-size: 48px
+		display: block
+
+@import "media" // Always at the end
