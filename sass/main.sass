@@ -67,6 +67,8 @@ form
 	background-attachment: fixed
 	grid-template: auto 1fr / 1fr
 	.header-menu
+		.mobile
+			display: none
 		.open:nth-child(odd)
 			background-color: lighten($accent, 20%)
 		z-index: 2
@@ -76,17 +78,14 @@ form
 		grid-template-columns: 25% 25% 25% 25%
 		.panel
 			display: grid
-			grid-template-columns: 50% 50%
+			grid-template-columns: 1fr
 			background-color: lighten($accent, 35%)
 			position: absolute
 			width: 100%
-			height: 100vh
-			top: -110vh
+			height: 400px
+			top: -130vh
 			transition: .5s
 			.menu-item
-				
-
-
 				.icon
 					display: block
 					margin-bottom: 5px
@@ -108,7 +107,7 @@ form
 			display: block !important
 			text-align: left
 			p,form,h3,span
-				padding-left: 16px
+				padding: 0 16px
 			padding-top: 16px
 			h3
 				color: #f7f7f7
@@ -117,7 +116,7 @@ form
 			grid-template: auto 1fr / 1fr
 			form
 				padding-left: 16px
-		.open-menu,.open-social,.open-contacts,.open-info
+		.open
 			background-color: lighten($accent, 25%)
 			position: relative
 			h1
@@ -128,7 +127,7 @@ form
 			&:hover
 				.panel
 					top: 0
-		
+
 	.header-inner
 		align-self: center
 		justify-self: center

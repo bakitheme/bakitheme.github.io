@@ -48,25 +48,41 @@
 			
 			.desktop
 				display: none
+			.mobile
+				display: block
 		.panel
 			width: 300% !important
 			z-index: 2
 			.menu-item
-				font-size: 12px !important
+				font-size: 10px !important
 			.icon
 				font-size: 26px !important
 		.info
 			left: -200%
+			font-size: 14px
 		.social
 			left: -100%
 	.about-us
 		padding: 32px 0
 		grid-template-columns: 90%
 	.portfolio-section
-		grid-template: auto 1500px / 90%
+		grid-template: 200px 1500px / 90%
+		.controls
+			grid-template-rows: 60px 60px 60px
 		.container
 			grid-template-columns: 1fr
 	.benefits-section
 		grid-template-columns: 90%
 	.reviews-section
 		grid-template: 150px / 90%
+
+// Landscape orientation
+
+@media (max-width: 640px) and (orientation: landscape)
+	.main-header
+		height: 450px
+	.main-header::before
+		height: 450px
+	.info
+		font-size: 12px
+				
