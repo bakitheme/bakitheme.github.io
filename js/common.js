@@ -10,5 +10,5 @@ $(function() {
         navText:['Previous','Next'],
         items: 1,
     })
-    
+    new WOW().init(); 
 });
