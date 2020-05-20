@@ -47,6 +47,30 @@ b, strong
 .grid 
 	display: grid
 
+table
+	overflow-x: auto
+	width: 100%
+	font-size: 14px
+	tr:nth-child(even)
+		background-color: lighten($accent,20%)
+	tr:nth-child(odd)
+		background-color: lighten($accent,15%)
+		
+	th,td
+		padding: 12px
+		transition: .4s
+		&:hover
+			background-color: $accent
+	th 
+		text-transform: uppercase
+		text-align: left
+		background-color: lighten($accent,5%)
+	td 	
+		
+		
+		
+
+
 form
 	text-align: left
 	position: relative

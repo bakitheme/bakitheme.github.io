@@ -94,7 +94,7 @@
 			<h1 class="header-title">Welcome to Asmodain</h1>
 			<h4 class="header-subtitle">Place of real creators</h4>
 			<a href="#" class="button create-modal-btn">Create</a>
-			<a href="#" class="button button-secondary">Pricing</a>
+			<a href="#" class="button button-secondary pricing-modal-btn">Pricing</a>
 
 
 			
@@ -286,6 +286,63 @@
 			</p>
 		</form>
 	</div>
+	<div class="tingle-demo tingle-demo-big pricing-modal">
+		<h1>Pricing Table</h1>
+		<table>
+			<tr>
+				<th>Size</th>
+				<th>Room</th>
+				<th>Description</th>
+				<th>Price</th>
+			</th>
+			<tr>
+				<td><10m2</td>
+				<td rowspan='4'>Headquartes</td>
+				<td rowspan='4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quasi eveniet provident similique obcaecati vero fugit, veritatis nemo amet voluptas.</td>
+				<td>99$</td>
+			</tr>
+			<tr>
+				<td><30m2</td>
+				<td>149$</td>
+			</tr>
+			<tr>
+				<td><60m2</td>
+				<td>189$</td>
+			</tr>
+			<tr>
+				<td>>90m2</td>
+				<td>239$</td>
+			</tr>
+			<tr>
+				<td><10m2</td>
+				<td rowspan='2'>Bedroom</td>
+				<td rowspan='2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius consequatur dicta ab vitae. Dolorem eos voluptas, molestiae!</td>
+				<td>59$</td>
+			</tr>
+			<tr>
+				<td><30m2</td>
+				<td>89$</td>
+			</tr>
+			<tr>
+				<td><10m2</td>
+				<td rowspan='4'>Studio / Office</td>
+				<td rowspan='4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci officiis quo pariatur qui tempora, quia nam eius asperiores, impedit laboriosam at consequatur dignissimos voluptas laudantium, natus unde porro. Recusandae, cum.</td>
+				<td>79$</td>
+			</tr>
+			<tr>
+				<td><30m2</td>
+				<td>129$</td>
+			</tr>
+			<tr>
+				<td><60m2</td>
+				<td>139$</td>
+			</tr>
+			<tr>
+				<td>>90m2</td>
+				<td>209$</td>
+			</tr>
+		</table>
+	</div>
 	<script src="js/scripts.min.js"></script>
 	<script>
 		// Modal for create form
@@ -307,6 +364,12 @@
 			modalTinyBtn.close();
 		});
 
+		var modalBigContent = new tingle.modal();
+		var btn3 = document.querySelector('.pricing-modal-btn');
+		btn3.addEventListener('click', function(){
+			modalBigContent.open();
+		});
+		modalBigContent.setContent(document.querySelector('.pricing-modal').innerHTML);
 	</script>
 </body>
 </html>
