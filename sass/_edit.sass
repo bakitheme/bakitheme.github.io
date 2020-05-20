@@ -1,0 +1,95 @@
+.owl-nav
+	.owl-prev,.owl-next
+		text-transform: uppercase
+		letter-spacing: 2px
+		font-size: 14px !important
+		font-weight: bold !important
+		transition: .4s
+		&:hover
+			background-color: lighten($accent, 5%) !important
+		&:focus
+			outline: none
+		background-color: lighten($accent, 25%) !important
+	display: grid
+	margin-top: 10px
+	grid-template: 100px / 1fr 1fr
+	grid-gap: 10px
+
+.tingle-modal__close
+	width: 1rem
+	height: 1rem
+	transition: .4s
+	&:hover
+		color: $accent
+
+.tingle-modal-box
+	background-color: lighten($accent,25%)
+	border-radius: 0
+	border-top: 5px solid $accent
+.tingle-modal-box__footer
+	background-color: lighten($accent,20%)
+
+.tingle-btn 
+	box-sizing: border-box
+	font-family: $default-font
+	outline: none
+	border: none
+	text-decoration: none
+	color: #000
+	background-color: $accent
+	padding: 12px 36px
+	transition: .3s
+	display: inline-block
+	overflow: hidden
+	position: relative
+	&::after
+		content: ''
+		background-color: lighten($accent, 25%)
+		width: 20px
+		height: 20px
+		border-radius: 50%
+		position: absolute
+		transition: .3s
+		top: -20px
+		left: -20px
+	&:hover
+		&::after
+			transform: scale(10)
+			top: 0
+			left: 0
+			opacity: 0
+		background-color: darken($accent, 10%)
+		text-decoration: none
+		color: #000
+	&:focus
+		background-color: lighten($accent, 10%)
+
+.tingle-btn--default 
+	background-color: #111111
+	color: #ffffff
+	&:hover
+		background-color: #000000
+		color: #ffffff
+	&:focus
+		background-color: #151515
+
+@media (max-width : 540px)
+	.tingle-modal-box__content
+		padding: 16px
+	.tingle-modal-box__footer
+		padding: 16px
+	.tingle-modal__close
+		width: 100%
+		height: 60px
+		background-color: darken($accent, 15%)
+	.tingle-modal__closeLabel
+		font-size: 14px
+		font-family: $default-font
+		text-transform: uppercase
+		letter-spacing: 2px
+
+	.tingle-modal-box__footer 
+	 	.tingle-btn, button
+	 		box-sizing: border-box
+	 		margin: 10px 0 !important
+

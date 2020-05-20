@@ -93,8 +93,11 @@
 		<div class="header-inner">
 			<h1 class="header-title">Welcome to Asmodain</h1>
 			<h4 class="header-subtitle">Place of real creators</h4>
-			<a href="#" class="button">Create</a>
+			<a href="#" class="button create-modal-btn">Create</a>
 			<a href="#" class="button button-secondary">Pricing</a>
+
+
+			
 		</div>
 	</header>
 	<section class="about-us grid">
@@ -252,6 +255,59 @@
 			asmodain example project by <b>Denis Vakar</b> | 2020
 		</p>
 	</footer>
+	<div class="tingle-demo tingle-demo-tiny create-modal">
+		<form class="grid create-form">
+			<p>
+				<label for="name">Your Name</label>
+				<input type="text" id="name" placeholder="Name Surname" required>
+			</p>
+			<p>
+				<label for="phone">Phone Number</label>
+				<input type="text" id="phone" placeholder="Eg. +38(000)00-00-000" required>
+			</p>
+			<p>
+				<label for="type">Type of Room</label>
+				<select id="type">
+					<option value="1">Headquartes</option>
+					<option value="2">Living Room</option>
+					<option value="3">Studio / Office</option>
+					<option value="4">Play / Chill Room</option>
+					<option value="5">Kitchen</option>
+					<option value="6">Bathroom</option>
+				</select>
+			</p>
+			<p>
+				<label for="square">Square</label>
+				<input type="text" id="square" placeholder="sq. meters" required>
+			</p>
+			<p>
+				<label for="comm">Comment (optional)</label>
+				<textarea id="comm" placeholder="Add your comment"></textarea>
+			</p>
+		</form>
+	</div>
+	<script src="libs/tingle.js"></script>
+	<script>
+		// Modal for create form
+		var modalTinyBtn = new tingle.modal({
+			footer: true
+		});
+		var btn2 = document.querySelector('.create-modal-btn');
+
+		btn2.addEventListener('click', function(){
+			modalTinyBtn.open();
+		});
+
+		modalTinyBtn.setContent(document.querySelector('.create-modal').innerHTML);
+		modalTinyBtn.addFooterBtn('Accept', 'tingle-btn tingle-btn--primary tingle-btn--pull-right', function() {
+			alert('click on primary button!');
+		});
+
+		modalTinyBtn.addFooterBtn('Cancel', 'tingle-btn tingle-btn--default tingle-btn--pull-right', function(){
+			modalTinyBtn.close();
+		});
+
+	</script>
 	<script src="js/scripts.min.js"></script>
 </body>
 </html>

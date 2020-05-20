@@ -10,4 +10,5 @@ $(function() {
         navText:['Previous','Next'],
         items: 1,
     })
+    
 });
