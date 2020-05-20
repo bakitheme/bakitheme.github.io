@@ -48,7 +48,8 @@ b, strong
 	display: grid
 
 table
-	overflow-x: auto
+	box-sizing: border-box 
+	overflow-x: scroll !important
 	width: 100%
 	font-size: 14px
 	tr:nth-child(even)
@@ -102,7 +103,14 @@ form
 	background-attachment: fixed
 	grid-template: 10% 1fr / 1fr
 	.header-menu
-
+		.open 
+			transition: .5s
+			&:hover
+				background-color: #fff !important
+		.open-info 
+			&:hover
+				background-color: #111 !important
+				color: #fff
 		.mobile
 			display: none
 		.open:nth-child(odd)
@@ -141,6 +149,8 @@ form
 				font-weight: bold
 				&:hover
 					background-color: lighten($accent, 20%)
+		.menu 
+			grid-template-columns: 1fr 1fr
 		.info
 			background-color: #111
 			color: #ccc
@@ -420,6 +430,7 @@ form
 	align-items: center
 	font-size: 14px
 	letter-spacing: 2px
+	padding: 32px
 	.icon
 		font-size: 48px
 		display: block

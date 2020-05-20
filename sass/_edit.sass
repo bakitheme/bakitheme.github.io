@@ -89,13 +89,23 @@
 		height: 60px
 		background-color: darken($accent, 15%)
 	.tingle-modal__closeLabel
-		font-size: 14px
+		font-size: 12px
 		font-family: $default-font
 		text-transform: uppercase
+		font-weight: bold
 		letter-spacing: 2px
+	.tingle-modal__closeIcon
+		width: 10px
+		margin: 0
+		margin-right: 4px
+
 
 	.tingle-modal-box__footer 
 	 	.tingle-btn, button
 	 		box-sizing: border-box
 	 		margin: 10px 0 !important
 
+@media (max-width: 640px) and (orientation: landscape)
+	.tingle-modal-box
+		width: 80% !important
+  
