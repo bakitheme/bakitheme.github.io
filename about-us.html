@@ -91,7 +91,7 @@
 			
 		</div>
 		<div class="header-inner wow animate__fadeInUp" data-wow-duration="1s">
-			<h1 class="header-title">What is Asmodian</h1>
+			<h1 class="header-title">What is <span class="accent">Asmodian</span></h1>
 			<h4 class="header-subtitle">Who we are and what it means for you</h4>
 			<a href="index.html" class="button">Come Back</a>
 		</div>
@@ -99,13 +99,13 @@
 	<section class="about-us grid">
 		<img class="about-image img-responsive wow animate__fadeInUp" src="img/dist/4.jpg" alt="about_us_image" data-wow-duration="1s">
 		<div class="about-text wow animate__fadeInUp" data-wow-duration="1s">
-			<h2>First Things First</h2>
+			<h2><span class="accent">First</span> Things First</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quibusdam numquam beatae provident cum quas ex minus, nemo ad earum fugiat repellendus voluptates quam maxime eveniet. Eos fugiat, ipsa natus.</p>
-			<h2>Whats Next?</h2>
+			<h2>Whats <span class="accent">Next</span>?</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit officiis eveniet delectus ea illo ut cupiditate, earum dolor sit nisi deleniti a aliquam reiciendis, tempore ipsa tempora quaerat neque, obcaecati sed, deserunt iusto molestias maxime voluptatem! Pariatur provident, explicabo quod.</p>		
 		</div>
 	</section>
-	<section class="team-section grid">
+	<section class="team-section grid wow animate__fadeInUp" data-wow-duration="1s">
 		<div class="section-title">
 			<span class="icon icon-Users"></span>
 			<h1>Our Team</h1>
@@ -116,7 +116,7 @@
 			<img src="img/dist/Dalekorey.jpg" alt="Dalekorey">
 			<h3 class="card-title">Bohdan Dalekorey</h3>
 			<h5 class="card-subtitle">Designer</h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis placeat nihil quae et tenetur, sunt, quia harum. Eaque nesciunt, expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, totam.</p>
 			<div class="card-footer">
 				<a href="#" class="badge">inst</a>
 				<a href="#" class="badge">fb</a>
@@ -128,7 +128,7 @@
 			<img src="img/dist/Balan.jpg" alt="Dalekorey">
 			<h3 class="card-title">Dimon Balan</h3>
 			<h5 class="card-subtitle">Builder</h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eius harum voluptates! Quia enim, perferendis, nobis pariatur sunt ratione velit.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, sunt!</p>
 			<div class="card-footer">
 				<a href="#" class="badge">inst</a>
 				<a href="#" class="badge">fb</a>
@@ -139,7 +139,7 @@
 			<img src="img/dist/Petkanich.jpg" alt="Dalekorey">
 			<h3 class="card-title">Bohdan Petkanich</h3>
 			<h5 class="card-subtitle">Manager</h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis placeat nihil quae et tenetur, sunt, quia harum. Eaque nesciunt, expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, consequuntur!</p>
 			<div class="card-footer">
 				<a href="#" class="badge">fb</a>
 				<a href="#" class="badge">tg</a>
@@ -150,10 +150,42 @@
 			<img src="img/dist/Monich.jpg" alt="Dalekorey">
 			<h3 class="card-title">Vitalya Monich</h3>
 			<h5 class="card-subtitle">Administrator</h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis placeat nihil quae et tenetur, sunt, quia harum. Eaque nesciunt, expedita.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, facilis?</p>
 			<div class="card-footer">
 				<a href="#" class="badge">inst</a>
 				<a href="#" class="badge">tg</a>
+			</div>
+		</div>
+	</section>
+	<section class="gallery wow animate__fadeInUp" data-wow-duration="1s">
+		<h1>Asmodian Gallery</h1>
+		<div class="masonry">
+			<div style="background-image: url('img/dist/1.jpg');" class="masonry-item">
+				<span>Work</span>
+			</div>
+			<div style="background-image: url('img/dist/4.jpg');" class="masonry-item">
+				<span>Here we Go</span>
+			</div>
+			<div style="background-image: url('img/dist/2.jpg');" class="masonry-item">
+				<span>What about This?</span>
+			</div>
+			<div style="background-image: url('img/dist/3.jpg');" class="masonry-item">
+				<span>Our work</span>
+			</div>
+			<div style="background-image: url('img/dist/7.jpg');" class="masonry-item">
+				<span>Green zone</span>
+			</div>
+			<div style="background-image: url('img/dist/8.jpg');" class="masonry-item">
+				<span>Team work</span>
+			</div>
+			<div style="background-image: url('img/dist/9.jpg');" class="masonry-item">
+				<span>Chill</span>
+			</div>
+			<div style="background-image: url('img/dist/6.jpg');" class="masonry-item">
+				<span>Frame</span>
+			</div>
+			<div style="background-image: url('img/dist/5.jpg');" class="masonry-item">
+				<span>Sofa</span>
 			</div>
 		</div>
 	</section>
@@ -164,5 +196,13 @@
 		</p>
 	</footer>
 	<script src="js/scripts.min.js"></script>
+	<script>
+		new WOW().init(); 
+
+		$('.masonry').masonry({
+
+			itemSelector: '.masonry-item',
+		});
+	</script>
 </body>
 </html>

@@ -68,7 +68,8 @@ table
 		
 		
 		
-
+.accent
+	color: $accent
 
 form
 	text-align: left
@@ -445,7 +446,7 @@ form
 	justify-content: center
 	width: 100%
 	grid-gap: 10px
-	grid-template-columns: 20% 20% 20% 20%
+	grid-template-columns: 18% 18% 18% 18%
 	.section-title
 		background-color: #111
 		color: #fafafa
@@ -470,6 +471,7 @@ form
 			background-color: $accent
 			transition: .5s
 		&:hover
+			box-shadow: 0 0 32px rgba(0,0,0,.16)
 			background-color: lighten($accent,25%)
 			img
 				filter: grayscale(.5)
@@ -505,5 +507,47 @@ form
 				text-transform: uppercase
 				&:hover
 					background-color: #fff
+
+
+.gallery
+	margin: 32px auto
+	width: 80%
+
+.masonry
+	.masonry-item
+		display: flex
+		align-items: center
+		justify-content: center
+		span 
+			text-align: center
+			text-transform: uppercase
+			font-weight: bold
+			letter-spacing: 2px
+			color: #fff
+			z-index: 1
+			opacity: 0
+			transition: .7s
+		position: relative
+		height: 350px
+		width: 25%		
+		background-size: cover
+		&::before
+			content: ''
+			position: absolute
+			background-color: #000
+			opacity: .0
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			transition: .4s
+		&:hover
+			span 
+				opacity: 1
+			&::before
+				opacity: .5
+
+	.masonry-item:nth-child(odd)
+		height: 200px
 
 @import "media" // Always at the end
